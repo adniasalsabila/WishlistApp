@@ -42,7 +42,7 @@ class RecyclerViewAdapter(val results: ArrayList<DataItem>) :
 //            holder.itemView.findViewById<EditText>(R.id.textFieldItem).setText(data.nameItem)
 //            holder.itemView.findViewById<EditText>(R.id.textFieldCost).setText(data.cost)
             val intent = Intent(holder.itemView.context, MainActivity::class.java)
-//            intent.putExtra("ID",data.id)
+            intent.putExtra("ID",data.id.toString())
             intent.putExtra("NAMEITEM", data.nameItem)
             intent.putExtra("COST", data.cost)
             intent.setAction("Edit")

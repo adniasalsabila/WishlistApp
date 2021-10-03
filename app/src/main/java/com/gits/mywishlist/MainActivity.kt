@@ -2,8 +2,6 @@ package com.gits.mywishlist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gits.mywishlist.model.DataItem
@@ -29,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonAdd.setOnClickListener {
             RetrofitClient.instance.insertWishlist(
-                0,
+                "0",
                 textFieldItem.editText?.text.toString().trim(),
                 textFieldCost.editText?.text.toString().toInt(),
                 "insert_wishlist"
@@ -60,11 +58,10 @@ class MainActivity : AppCompatActivity() {
             buttonAdd.setText("Edit")
             buttonAdd.setOnClickListener {
                 RetrofitClient.instance.updateWishlist(
-//                    0,
+                    intent.getStringExtra("ID").toString(),
                     textFieldItem.editText?.text.toString().trim(),
                     textFieldCost.editText?.text.toString().toInt(),
-                    0
-//                    "update_wishlist",
+                    "update_wishlist"
                 ).enqueue(object : Callback<DefaultResponse> {
                     override fun onResponse(
                         call: Call<DefaultResponse>,
