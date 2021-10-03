@@ -183,7 +183,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewFotoProfile" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldCoPassword"
+        android:id="@+id/textFieldTextImage"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -213,7 +213,7 @@
         app:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldCoPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textFieldTextImage" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

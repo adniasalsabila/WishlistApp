@@ -3,6 +3,7 @@ package com.gits.mywishlist.rest
 import com.gits.mywishlist.model.DefaultResponse
 import com.gits.mywishlist.model.GetListResponse
 import com.gits.mywishlist.model.ImageResponse
+import com.gits.mywishlist.model.LoginResponse
 import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -55,6 +56,12 @@ interface Api {
         @Field("password_user") passwordUser: String,
         @Query("function") function: String
     ) : Call<DefaultResponse>
+
+    @GET("apilogin.php?function=login_user")
+    fun loginUser(
+        @Query("email_user") email_user: String,
+        @Query("password_user") password_user: String
+    ): Call<LoginResponse>
 
     @Multipart
     @POST("image/create")
