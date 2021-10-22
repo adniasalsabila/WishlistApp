@@ -2,4 +2,8 @@
     <string name="app_name">My Wishlist</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intro1">Anda punya banyak keinginan yang belum terealisasikan? Catat pada aplikasi ini</string>
+    <string name="intro2">Catat tiap keinginanmu dengan menggunakan fitur tambah, tuliskan rincian keinginanmu secara detail</string>
+    <string name="intro3">Wujudkan daftar list anda, dengan begitu anda bisa berbelanja dengan teratur</string>
+
 </resources>
